@@ -26,7 +26,7 @@ const Menu = () => {
             </ul>
           </nav>
         </div>
-        <h3 className="title-added">Adicionados</h3>
+        <h3 className="title-added">Atualização</h3>
         <div className="added-songs">
           <ul>
             <li>Static</li>

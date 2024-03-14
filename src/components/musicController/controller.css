@@ -2,9 +2,7 @@
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 13%;
     background-color: #1a202c;
-  
   }
   .controller-button {
     display: flex;
@@ -40,4 +38,28 @@
     width: 4rem;
     background-color: #919293;
   }
-  
+  .progress-bar {
+    margin-top: -5rem;
+  }
+  .container-music-list {
+    flex-direction: column;
+    margin-left: 10rem;
+    border-color: red;
+    border: solid;
+    text-align: center;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 35.5rem;
+    position: fixed; 
+  }
+  .music-item-list {
+    display: flex; 
+    align-items: center;
+    margin: 10px;
+  }
+  .music-image-list {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    padding: 10px;
+  }
