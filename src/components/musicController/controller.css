@@ -1,65 +1,84 @@
 .controller-menu {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #1a202c;
-  }
-  .controller-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .controller-button span {
-    margin: 0.7rem;
-    margin-top: -6.5rem;
-    cursor: pointer;
-    color: yellow;
-  }
-  .container-music-information {
-   display: flex;
-   margin: 0.6rem;
-  }
-  .container-music-information span {
-    margin-left: 1rem;
-    margin-top: 1rem;
-    cursor: pointer;
-    color: yellow;
-  }
-  .music-information p {
-   margin-left: 1rem;
-   color: yellow;
-   text-align: center;
-   margin-top: 0.5rem;
-  }
-  .music-logo {
-    margin-left: 1rem;
-    border-radius: 0.2rem;
-    height: 3.7rem;
-    width: 4rem;
-    background-color: #919293;
-  }
-  .progress-bar {
-    margin-top: -5rem;
-  }
-  .container-music-list {
-    flex-direction: column;
-    margin-left: 10rem;
-    border-color: red;
-    border: solid;
-    text-align: center;
-    overflow: scroll;
-    overflow-x: hidden;
-    height: 35.5rem;
-    position: fixed; 
-  }
-  .music-item-list {
-    display: flex; 
-    align-items: center;
-    margin: 10px;
-  }
-  .music-image-list {
-    width: 80px;
-    height: 80px;
-    border-radius: 20px;
-    padding: 10px;
-  }
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #1a202c;
+}
+.controller-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.controller-button span {
+  margin: 0.7rem;
+  margin-top: -6.5rem;
+  color: yellow;
+}
+.teste-one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-music-information {
+  display: flex;
+  margin: 0.6rem;
+}
+.container-music-information span {
+  margin-left: 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  color: yellow;
+}
+.music-information p {
+  margin-left: 1rem;
+  color: yellow;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+.music-logo {
+  margin-left: 1rem;
+  border-radius: 0.2rem;
+  height: 3.7rem;
+  width: 4rem;
+  background-color: #919293;
+}
+.progress-bar {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* musica na tela do usuario */
+.container-music-list {
+  flex-direction: column;
+  margin-left: 12vw;
+  border: solid;
+  text-align: center;
+  height: 88%;
+  position: fixed;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.music-item-list {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+.music-image-list {
+  width: 70px;
+  height: 60px;
+  border-radius: 5px;
+}
+.music-image-list:hover {
+  cursor: pointer;
+}
+.music-information-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.music-information-list div {
+  margin: 0 30px;
+}
