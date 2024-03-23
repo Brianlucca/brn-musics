@@ -1,4 +1,6 @@
 .controller-menu {
+  display: flex;
+  align-items: center;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -8,21 +10,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  
+  margin-left: 30vw;
 }
 .controller-button span {
   margin: 0.7rem;
-  margin-top: -6.5rem;
   color: yellow;
 }
-.teste-one {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.progress-bar {
+  margin-top: 10px;
 }
+
 .container-music-information {
   display: flex;
-  margin: 0.6rem;
+  align-items: center;
+  margin-left: 10px;
 }
 .container-music-information span {
   margin-left: 1rem;
@@ -43,14 +44,7 @@
   width: 4rem;
   background-color: #919293;
 }
-.progress-bar {
-  margin-top: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-/* musica na tela do usuario */
 .container-music-list {
   flex-direction: column;
   margin-left: 12vw;
