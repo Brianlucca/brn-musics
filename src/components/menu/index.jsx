@@ -1,5 +1,8 @@
 import "./menu.css";
 import videoemalta from "./image/video-em-alta.png"
+import Favorites from "../modals/favorites"
+import Recommendation from "../modals/recommendation";
+import About from "../modals/about";
 
 const Menu = () => {
   return (
@@ -13,15 +16,15 @@ const Menu = () => {
             <ul>
               <span className="material-symbols-outlined">star</span>
               <li>
-                <a href="#">Favoritos</a>
+                <a><Favorites /></a>
               </li>
               <span className="material-symbols-outlined">upload</span>
               <li>
-                <a href="#">Indicação</a>
+                <a href="#"><Recommendation /></a>
               </li>
               <span className="material-symbols-outlined">contact_page</span>
               <li>
-                <a href="#">Sobre</a>
+                <a href="#"><About /></a>
               </li>
             </ul>
           </nav>
@@ -49,7 +52,6 @@ const Menu = () => {
         </div>
         <div></div>
       </div>
-
       <div className="controller-menu"></div>
     </section>
   );
