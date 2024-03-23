@@ -1,87 +1,6 @@
 import { useState, useEffect } from "react";
 import "./controller.css";
-import Music from "./music/ForTheFirstTime.mp3";
-import Redrum from "./music/Redrum.mp3";
-
-const musicas = [
-  {
-    nome: "For the first time",
-    banda: "Mac Demarco",
-    musica: Music,
-    imagem:
-      "https://muzikalia.com/wp-content/uploads/2017/05/macdemarco-thisolddog-800x445.jpeg",
-  },
-  {
-    nome: "Redrum",
-    banda: "21 Savage",
-    musica: Redrum,
-    imagem:
-      "https://neonmusic.online/wp-content/uploads/2024/01/864851040cd7-768x432.jpg",
-  },
-  {
-    nome: "Redrum",
-    banda: "21 Savage",
-    musica: Redrum,
-    imagem:
-      "https://neonmusic.online/wp-content/uploads/2024/01/864851040cd7-768x432.jpg",
-  },
-  {
-    nome: "Redrum",
-    banda: "21 Savage",
-    musica: Redrum,
-    imagem:
-      "https://neonmusic.online/wp-content/uploads/2024/01/864851040cd7-768x432.jpg",
-  },
-  {
-    nome: "Redrum",
-    banda: "21 Savage",
-    musica: Redrum,
-    imagem:
-      "https://neonmusic.online/wp-content/uploads/2024/01/864851040cd7-768x432.jpg",
-  },
-  {
-    nome: "Redrum",
-    banda: "21 Savage",
-    musica: Redrum,
-    imagem:
-      "https://neonmusic.online/wp-content/uploads/2024/01/864851040cd7-768x432.jpg",
-  },
-  {
-    nome: "Redrum",
-    banda: "21 Savage",
-    musica: Redrum,
-    imagem:
-      "https://neonmusic.online/wp-content/uploads/2024/01/864851040cd7-768x432.jpg",
-  },
-  {
-    nome: "Redrum",
-    banda: "21 Savage",
-    musica: Redrum,
-    imagem:
-      "https://neonmusic.online/wp-content/uploads/2024/01/864851040cd7-768x432.jpg",
-  },
-  {
-    nome: "Redrum",
-    banda: "21 Savage",
-    musica: Redrum,
-    imagem:
-      "https://neonmusic.online/wp-content/uploads/2024/01/864851040cd7-768x432.jpg",
-  },
-  {
-    nome: "Redrum",
-    banda: "21 Savage",
-    musica: Redrum,
-    imagem:
-      "https://neonmusic.online/wp-content/uploads/2024/01/864851040cd7-768x432.jpg",
-  },
-  {
-    nome: "Redrum",
-    banda: "21 Savage",
-    musica: Redrum,
-    imagem:
-      "https://neonmusic.online/wp-content/uploads/2024/01/864851040cd7-768x432.jpg",
-  },
-];
+import { musicas } from "../musics/musics.js";
 
 let indiceMusicaAtual = 0;
 let audioPlayer = null;
@@ -177,8 +96,22 @@ const Controller = () => {
                 onClick={() => tocarMusicaFromList(index)}
               />
               <div className="music-information-list">
-                <p>{musica.nome}</p>
-                <p>{musica.banda}</p>
+                <div>
+                  <span>Musica</span>
+                  <p>{musica.nome}</p>
+                </div>
+                <div>
+                  <span>Banda</span>
+                  <p>{musica.banda}</p>
+                </div>
+                <div>
+                  <span>Genero</span>
+                  <p>{musica.genero}</p>
+                </div>
+                <div>
+                  <span>Duração</span>
+                  <p>{musica.duracao}</p>
+                </div>
               </div>
             </div>
           ))}
@@ -199,32 +132,34 @@ const Controller = () => {
           <span className="material-symbols-outlined">star</span>
         </div>
         <div className="controller-button">
-          <span className="material-symbols-outlined" onClick={voltarMusica}>
-            arrow_back_ios_new
-          </span>
-          <span
-            className="material-symbols-outlined"
-            onClick={tocarPausarMusica}
-          >
-            {isTocando ? "pause_circle" : "play_circle"}
-          </span>
-          <span className="material-symbols-outlined" onClick={avancarMusica}>
-            arrow_forward_ios
-          </span>
-          <div className="progress-bar">
-            <input
-              type="range"
-              min="0"
-              max="1"
-              step="0.01"
-              value={progressoMusica}
-              onChange={(e) => {
-                if (audioPlayer) {
-                  audioPlayer.currentTime =
-                    e.target.value * audioPlayer.duration;
-                }
-              }}
-            />
+          <div className="teste-one">
+            <span className="material-symbols-outlined" onClick={voltarMusica}>
+              arrow_back_ios_new
+            </span>
+            <span
+              className="material-symbols-outlined"
+              onClick={tocarPausarMusica}
+            >
+              {isTocando ? "pause_circle" : "play_circle"}
+            </span>
+            <span className="material-symbols-outlined" onClick={avancarMusica}>
+              arrow_forward_ios
+            </span>
+            <div className="progress-bar">
+              <input
+                type="range"
+                min="0"
+                max="1"
+                step="0.01"
+                value={progressoMusica}
+                onChange={(e) => {
+                  if (audioPlayer) {
+                    audioPlayer.currentTime =
+                      e.target.value * audioPlayer.duration;
+                  }
+                }}
+              />
+            </div>
           </div>
         </div>
       </div>
